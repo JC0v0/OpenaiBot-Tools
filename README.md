@@ -21,3 +21,9 @@ pip install -r requirements.txt
 ```
 
 然后在`config.py`中填入配置，可根据需要进行自定义修改
+
+## 运行
+运行根目录下的`bot.py` 文件就可以在终端对话
+```bash
+python bot.py
+```
