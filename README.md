@@ -12,3 +12,12 @@ cd OpenaiBot-Tools/
 ```bash
 pip install -r requirements.txt
 ```
+## 配置
+
+配置文件的模板在根目录的`config-template.py`中，需复制该模板创建最终生效的 `config.py` 文件：
+
+```bash
+  cp config-template.py config.py
+```
+
+然后在`config.py`中填入配置，可根据需要进行自定义修改
