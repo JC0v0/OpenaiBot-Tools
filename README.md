@@ -1,5 +1,6 @@
 # OpenaiBot-Tools
-![WechatIMG38](https://github.com/JC0v0/OpenaiBot-Tools/assets/108552928/de992118-44b4-49a1-a4d9-0a12cc451e7e)
+![微信截图_20230817144336](https://github.com/JC0v0/OpenaiBot-Tools/assets/108552928/2ef3b6d2-1f35-4410-bfea-172293aa0162)
+
 
 ** 克隆项目代码：**
 
