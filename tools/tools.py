@@ -16,6 +16,8 @@ from tools.tool.weather import get_weather
 from tools.tool.joke import get_joke
 from tools.tool.qinghua import get_qinghua
 from tools.tool.check_express import kd
+from tools.tool.constellation import Horoscope
+
 python = PythonREPLTool()
 requests = TextRequestsWrapper()
 shell_tool = ShellTool()
@@ -60,4 +62,5 @@ tools_name = [
     get_joke,
     get_qinghua,
     kd,
+    Horoscope
 ]
