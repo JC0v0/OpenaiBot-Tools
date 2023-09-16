@@ -13,3 +13,5 @@ token = ""
 
 #设置交互方式  terminal , speech  
 interactive_mode = "terminal"
+
+sqldatabase_uri = "mysql+pymysql://<用户名>:<密码>@<ip地址:端口号>/数据库名"
