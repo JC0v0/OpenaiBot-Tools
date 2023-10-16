@@ -10,6 +10,9 @@ from langchain.tools.file_management.move import MoveFileTool
 from langchain.tools.file_management.list_dir import ListDirectoryTool
 from langchain.tools import WikipediaQueryRun
 from langchain.utilities import WikipediaAPIWrapper
+from langchain.tools.zapier.tool import ZapierNLARunAction
+from langchain.utilities.zapier import ZapierNLAWrapper
+from config import ZAPIER_NLA_API_KEY,Getmail_action_id,Senemail_actiopn_id
 from tools.tool.zaobao import zaobao
 from tools.tool.comment import comment
 from tools.tool.weather import get_weather 
@@ -23,7 +26,13 @@ requests = TextRequestsWrapper()
 shell_tool = ShellTool()
 ddg_search = DuckDuckGoSearchResults()
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
-
+zapier_Getmail = ZapierNLARunAction(api_wrapper=ZapierNLAWrapper(zapier_nla_api_key=ZAPIER_NLA_API_KEY),
+                            zapier_description="你可以使用它获取邮件",
+                            action_id=Getmail_action_id,
+                            )
+zapier_Senemail = ZapierNLARunAction(api_wrapper=ZapierNLAWrapper(zapier_nla_api_key=ZAPIER_NLA_API_KEY),
+                            zapier_description="你可以使用它发送邮件",
+                            action_id=Senemail_actiopn_id,)
 tools_name = [
     Tool.from_function(
         func=ddg_search.run,
@@ -54,6 +63,18 @@ tools_name = [
         func=wikipedia.run,
         name="Wiki",
         description="Wikipedia knowledge base, you can search for some useful knowledge",
+        handle_tool_error=True,
+    ),
+    Tool.from_function(
+        func=zapier_Getmail.run,
+        name="zapier_Getmail",
+        description="你可以使用它获取邮件",
+        handle_tool_error=True,
+    ),
+    Tool.from_function(
+        func=zapier_Senemail.run,
+        name="zapier_Senemail",
+        description="你可以使用它发送邮件",
         handle_tool_error=True,
     ),
     zaobao,
