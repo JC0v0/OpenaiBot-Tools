@@ -14,4 +14,10 @@ token = ""
 #设置交互方式  terminal , speech  
 interactive_mode = "terminal"
 
+#sqlchat
 sqldatabase_uri = "mysql+pymysql://<用户名>:<密码>@<ip地址:端口号>/数据库名"
+
+#zapier   api_key申请链接：https://nla.zapier.com/credentials/
+ZAPIER_NLA_API_KEY = ""
+Getmail_action_id = ""
+Senemail_actiopn_id = ""
